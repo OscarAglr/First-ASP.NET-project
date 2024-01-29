@@ -1,0 +1,19 @@
+﻿@model List<WebApplication1.Models.Categoría>
+
+<h1>Categorías</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var cat in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>cat.NombreCategoría)</td>
+            </tr>
+        }
+    </tbody>
+</table>

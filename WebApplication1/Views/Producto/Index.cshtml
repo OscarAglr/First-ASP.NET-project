@@ -1,0 +1,28 @@
+﻿@model List<Producto>
+
+<h1>Productos</h1>
+<p>
+    <a asp-action="Create">Crear</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Existencias</th>
+            <th>Categoría</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var prod in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => prod.NombreProducto)</td>
+                <td>@Html.DisplayFor(m => prod.Precio)</td>
+                <td>@Html.DisplayFor(m => prod.Stock)</td>
+                <td>@Html.DisplayFor(m => prod.IdCategoríaNavigation.NombreCategoría)</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
